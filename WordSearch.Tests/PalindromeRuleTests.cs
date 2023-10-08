@@ -1,3 +1,4 @@
+using Shouldly;
 using WordSearchEngine;
 
 namespace WordSearch.Tests
@@ -16,11 +17,11 @@ namespace WordSearch.Tests
             var result = _rule.ApplyRule(words);
 
             // Assert
-            Assert.Collection(result,
-                item => Assert.Equal("madam", item),
-                item => Assert.Equal("radar", item),
-                item => Assert.Equal("level", item)
-            );
+            result.Count.ShouldBe(3); // exact number of Palindromes
+
+            result.ShouldContain("madam");
+            result.ShouldContain("radar");
+            result.ShouldContain("level");
         }
 
         // More tests for different cases
