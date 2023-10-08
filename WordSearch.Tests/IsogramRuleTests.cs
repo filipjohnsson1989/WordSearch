@@ -1,17 +1,20 @@
 using Shouldly;
+using WordSearchEngine;
 
 namespace WordSearch.Tests;
 
 public class IsogramRuleTests
 {
+    private readonly IsogramRule _rule = new();
+
     [Fact]
     public void ApplyRule_Returns_Isograms()
     {
         // Arrange
-        List<string> words = new List<string> { "word", "hello", "banana", "Madam", "AAbb", "isogram", "aabBcCd" };
+        List<string> words = new() { "word", "hello", "banana", "Madam", "AAbb", "isogram", "aabBcCd" };
 
         // Act
-        List<string> result = new();
+        var result = _rule.ApplyRule(words);
 
         // Assert
         result.Count.ShouldBe(2); // exact number of Isograms
