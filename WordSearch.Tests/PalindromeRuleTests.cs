@@ -11,7 +11,7 @@ public class PalindromeRuleTests
     public void ApplyRule_Returns_Palindromes()
     {
         // Arrange
-        List<string> words = new List<string> { "madam", "hello", "radar", "level" };
+        List<string> words = new() { "madam", "hello", "radar", "level" };
 
         // Act
         var result = _rule.ApplyRule(words);
