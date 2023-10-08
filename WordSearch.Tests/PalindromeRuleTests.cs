@@ -1,7 +1,11 @@
+using WordSearchEngine;
+
 namespace WordSearch.Tests
 {
     public class PalindromeRuleTests
     {
+        private readonly PalindromeRule _rule = new PalindromeRule();
+
         [Fact]
         public void ApplyRule_Returns_Palindromes()
         {
@@ -9,7 +13,7 @@ namespace WordSearch.Tests
             List<string> words = new List<string> { "madam", "hello", "radar", "level" };
 
             // Act
-            List<string> result = new(); //TODO: Act
+            var result = _rule.ApplyRule(words);
 
             // Assert
             Assert.Collection(result,
@@ -21,6 +25,4 @@ namespace WordSearch.Tests
 
         // More tests for different cases
     }
-
-
 }
