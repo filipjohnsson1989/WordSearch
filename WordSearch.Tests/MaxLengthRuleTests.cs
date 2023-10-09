@@ -1,4 +1,5 @@
 ﻿using Shouldly;
+using WordSearchEngine;
 
 namespace WordSearch.Tests;
 
@@ -42,20 +43,5 @@ public class MaxLengthRuleTests
 
         // Assert
         result.ShouldBeEmpty();
-    }
-}
-
-public class MaxLengthRule
-{
-    private readonly int _maxLength;
-
-    public MaxLengthRule(int maxLength)
-    {
-        this._maxLength = maxLength;
-    }
-
-    public List<string> ApplyRule(List<string> words)
-    {
-        throw new NotImplementedException();
     }
 }
