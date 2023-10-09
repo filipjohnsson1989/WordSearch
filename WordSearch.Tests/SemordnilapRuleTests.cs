@@ -1,9 +1,12 @@
 using Shouldly;
+using WordSearchEngine;
 
 namespace WordSearch.Tests;
 
 public class SemordnilapRuleTests
 {
+    private readonly SemordnilapRule _rule = new();
+
     [Fact]
     public void ApplyRule_Returns_Semordnilaps()
     {
@@ -11,7 +14,7 @@ public class SemordnilapRuleTests
         List<string> words = new() { "Isogram", "semordnilap", "god", "dog", "deified", "repaid", "reward", "drawer", "diaper", "Palindromes" };
 
         // Act
-        List<string> result = new();
+        var result = _rule.ApplyRule(words);
 
         // Assert
         result.Count.ShouldBe(8); // exact number of Semordnilaps
