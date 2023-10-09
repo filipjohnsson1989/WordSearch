@@ -1,4 +1,5 @@
 ﻿using Shouldly;
+using WordSearchEngine;
 
 namespace WordSearch.Tests;
 
@@ -37,16 +38,4 @@ public class EndWithRuleTests
         // Assert
         result.ShouldBeEmpty();
     }
-}
-
-public class EndWithRule
-{
-    private readonly string _endWith;
-
-    public EndWithRule(string endWith)
-    {
-        this._endWith = endWith;
-    }
-
-    public List<string> ApplyRule(List<string> words) => new(); //TODO: Implement EndWith check logic
 }
