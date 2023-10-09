@@ -1,4 +1,5 @@
 ﻿using Shouldly;
+using WordSearchEngine;
 
 namespace WordSearch.Tests;
 
@@ -42,20 +43,5 @@ public class MinLengthRuleTests
 
         // Assert
         result.ShouldBeEmpty();
-    }
-}
-
-public class MinLengthRule
-{
-    private readonly int _minLength;
-
-    public MinLengthRule(int minLength)
-    {
-        this._minLength = minLength;
-    }
-
-    public List<string> ApplyRule(List<string> words)
-    {
-        throw new NotImplementedException();
     }
 }
