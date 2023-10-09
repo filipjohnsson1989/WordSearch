@@ -1,4 +1,5 @@
 ﻿using Shouldly;
+using WordSearchEngine;
 
 namespace WordSearch.Tests;
 
@@ -37,16 +38,4 @@ public class StartWithRuleTests
         // Assert
         result.ShouldBeEmpty();
     }
-}
-
-public class StartWithRule
-{
-    private readonly string _startWith;
-
-    public StartWithRule(string startWith)
-    {
-        this._startWith = startWith;
-    }
-
-    public List<string> ApplyRule(List<string> words) => new(); //TODO: Implement StartWith check logic
 }
