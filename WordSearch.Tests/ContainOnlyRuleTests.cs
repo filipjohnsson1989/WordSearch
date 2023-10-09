@@ -1,4 +1,5 @@
 ﻿using Shouldly;
+using WordSearchEngine;
 
 namespace WordSearch.Tests;
 
@@ -37,16 +38,4 @@ public class ContainOnlyRuleTests
         // Assert
         result.ShouldBeEmpty();
     }
-}
-
-public class ContainOnlyRule
-{
-    private readonly string _containOnly;
-
-    public ContainOnlyRule(string containOnly)
-    {
-        this._containOnly = containOnly;
-    }
-
-    public List<string> ApplyRule(List<string> words) => new(); //TODO: Implement ContainOnly check logic
 }
