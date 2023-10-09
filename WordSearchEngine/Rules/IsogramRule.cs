@@ -1,6 +1,6 @@
-﻿namespace WordSearchEngine;
+﻿namespace WordSearchEngine.Rules;
 
-public class IsogramRule
+public class IsogramRule : IRule
 {
     public List<string> ApplyRule(List<string> words) => words.Where(word => IsIsogram(word)).ToList();
 

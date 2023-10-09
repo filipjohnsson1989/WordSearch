@@ -1,6 +1,6 @@
-﻿namespace WordSearchEngine;
+﻿namespace WordSearchEngine.Rules;
 
-public class SemordnilapRule
+public class SemordnilapRule : IRule
 {
     public List<string> ApplyRule(List<string> words) => words.Where(word => IsSemordnilap(word, words)).ToList();
 

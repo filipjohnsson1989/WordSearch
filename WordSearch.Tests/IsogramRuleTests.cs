@@ -1,5 +1,5 @@
 using Shouldly;
-using WordSearchEngine;
+using WordSearchEngine.Rules;
 
 namespace WordSearch.Tests;
 

@@ -1,6 +1,6 @@
-﻿namespace WordSearchEngine;
+﻿namespace WordSearchEngine.Rules;
 
-public class PalindromeRule
+public class PalindromeRule : IRule
 {
     public List<string> ApplyRule(List<string> words) => words.Where(word => IsPalindrome(word)).ToList();
 
