@@ -22,7 +22,7 @@ public class WordSearchService
             if (parts.Length != 2)
             {
                 Console.WriteLine($"Invalid rule: {rule}. Skipping.");
-                continue;
+                throw new ArgumentOutOfRangeException();
             }
 
             var ruleType = parts[0];
@@ -37,6 +37,7 @@ public class WordSearchService
             else
             {
                 Console.WriteLine($"Unknown rule: {ruleType}. Skipping.");
+                throw new ArgumentException();
             }
         }
 
